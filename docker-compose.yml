@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web-app:
+    build:
+      context: .
+    ports:
+      - "4200:8080"
+    networks:
+      - app-network
+    environment:
+      AUTH_URL: https://identity.dev.sdbxaz.azure.backbaseservices.com/auth/
+      AUTH_REALM: customer
+      AUTH_CLIENT_ID: bb-web-client
+      API_ROOT: https://app.dev.sdbxaz.azure.backbaseservices.com/api/
+#      API_ROOT: http://host.docker.internal:9999/api/
+      PROXY_HEADER_KEY: X-Sdbxaz-Api-Key
+      PROXY_HEADER_VAL: apisandbox-7a974f43-46d2-ce92-770b-93f235035ffd
+      MOCK_API_ROOT: http://host.docker.internal:9999/api/
+networks:
+  app-network:
+    driver: bridge

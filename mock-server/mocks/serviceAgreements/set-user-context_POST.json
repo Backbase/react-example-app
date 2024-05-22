@@ -1,0 +1,35 @@
+{
+  "name": "/api/access-control/client-api/v3/accessgroups/user-context",
+  "request": {
+    "url": "/api/access-control/client-api/v3/accessgroups/user-context",
+    "method": "POST"
+  },
+  "responses": {
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Error while fetching countries"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 204
+    }
+  }
+}

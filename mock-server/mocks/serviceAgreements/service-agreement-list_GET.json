@@ -1,0 +1,50 @@
+{
+  "name": "/api/access-control/client-api/v3/accessgroups/user-context/service-agreements",
+  "request": {
+    "url": "/api/access-control/client-api/v3/accessgroups/user-context/service-agreements(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Error while fetching countries"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": [
+        {
+          "additions": {},
+          "id": "12345ed2abc2134",
+          "externalId": "sa_sdbxaz-ankit",
+          "name": "Ankit",
+          "description": "Master Service Agreement for Ankit",
+          "isMaster": true,
+          "validFromDate": null,
+          "validFromTime": null,
+          "validUntilDate": null,
+          "validUntilTime": null,
+          "customerCategory": null
+        }
+      ]
+    }
+  }
+}

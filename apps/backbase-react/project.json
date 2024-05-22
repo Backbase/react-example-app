@@ -1,0 +1,92 @@
+{
+  "name": "backbase-react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/backbase-react/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/backbase-react"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production",
+          "fileReplacements": [
+            {
+              "replace": "auth/src/lib/config/oidc-config.ts",
+              "with": "auth/src/lib/config/oidc-config.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "backbase-react:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "backbase-react:build:development",
+          "hmr": true,
+          "proxyConfig": "proxy.conf.json"
+        },
+        "production": {
+          "buildTarget": "backbase-react:build:production",
+          "hmr": false
+        },
+        "mocks": {
+          "buildTarget": "backbase-react:build:development",
+          "hmr": true,
+          "proxyConfig": "proxy.mock.conf.json"
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "backbase-react:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "backbase-react:build:development"
+        },
+        "production": {
+          "buildTarget": "backbase-react:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
+      "options": {
+        "reportsDirectory": "../../coverage/apps/backbase-react"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "backbase-react:build"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,20 @@
+{
+  "/api/client-api/v1/configuration/countries": {
+    "target": "http://localhost:9999",
+    "secure": false,
+    "changeOrigin": true 
+  },
+  "/api": {
+    "target": "https://app.dev.sdbxaz.azure.backbaseservices.com",
+    "secure": false,
+    "changeOrigin": true,
+    "headers": {
+      "X-Sdbxaz-Api-Key": "apisandbox-7a974f43-46d2-ce92-770b-93f235035ffd"
+    }    
+  },
+  "/auth": {
+    "target": "https://identity.dev.sdbxaz.azure.backbaseservices.com/auth/realms/customer",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
