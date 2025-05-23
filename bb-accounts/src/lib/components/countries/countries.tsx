@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import {
   CountryObject,
   GetCountriesListResponse,
-} from '@backbase-react/tyscript-rxjs';
+} from '@backbase/tyscript-rxjs';
 import { map } from 'rxjs/operators';
-import { rxApiEndPoint } from '@backbase-react/auth';
+import { rxApiEndPoint } from '@backbase/auth';
 import { Card } from 'react-bootstrap';
 
 /* eslint-disable-next-line */

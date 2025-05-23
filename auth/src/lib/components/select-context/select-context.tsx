@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { accessControlHttpClientServiceObj } from '../../services';
-import { ErrorComponent, Loader } from '@backbase-react/shared';
+import { ErrorComponent, Loader } from '@backbase/shared';
 import { Navigate } from 'react-router-dom';
 import { ServiceAgreement } from '../../models';
 

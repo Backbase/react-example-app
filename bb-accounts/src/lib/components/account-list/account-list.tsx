@@ -1,6 +1,6 @@
-import { accountsTransactionHttpClientServiceObj } from '@backbase-react/auth';
+import { accountsTransactionHttpClientServiceObj } from '@backbase/auth';
 import { useEffect, useState } from 'react';
-import { ProductGroup, ViewWithLoader } from '@backbase-react/ui-react';
+import { ProductGroup, ViewWithLoader } from '@backbase/ui-react';
 interface DataInterface {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: {

@@ -1,9 +1,9 @@
-import { accountsTransactionHttpClientServiceObj } from '@backbase-react/auth';
+import { accountsTransactionHttpClientServiceObj } from '@backbase/auth';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AccountInfoContainer } from './account-info-container/account-info-container';
 import { accountInfoViewDefaultConfig } from '../../../config/account-info.config';
-import { ErrorView, ViewWithLoader } from '@backbase-react/ui-react';
+import { ErrorView, ViewWithLoader } from '@backbase/ui-react';
 
 /* eslint-disable-next-line */
 export interface AccountInfoProps { }

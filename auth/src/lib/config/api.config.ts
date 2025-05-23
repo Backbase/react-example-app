@@ -2,7 +2,7 @@ import {
   GlobalAttributesApi,
   Configuration,
   Middleware,
-} from '@backbase-react/tyscript-rxjs';
+} from '@backbase/tyscript-rxjs';
 import { getAccessTokenFromStorage } from '../utils';
 
 

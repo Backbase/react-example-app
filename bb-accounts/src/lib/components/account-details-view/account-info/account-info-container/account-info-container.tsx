@@ -1,4 +1,4 @@
-import { CardWrapper } from "@backbase-react/ui-react";
+import { CardWrapper } from "@backbase/ui-react";
 import AccountInfoProperty from "../account-info-property/account-info-property";
 
 /* eslint-disable-next-line */

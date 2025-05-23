@@ -1,7 +1,7 @@
-import { ProtectedRoute } from '@backbase-react/shared';
+import { ProtectedRoute } from '@backbase/shared';
 import { Navigate, Outlet, RouteObject, useRoutes } from 'react-router-dom';
 import RetailLayout from './retail-layout/retail-layout';
-import { SelectContext } from '@backbase-react/auth';
+import { SelectContext } from '@backbase/auth';
 import { AccountsListPage, CountriesPage, AccountDetailViewContainer, AccountInfoView, TransactionslistView } from './journeys/app-journeys.bundle';
 import { environment } from '../environments/environment';
 

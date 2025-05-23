@@ -17,11 +17,11 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@backbase-react/auth": ["auth/src/index.ts"],
-      "@backbase-react/bb-accounts": ["bb-accounts/src/index.ts"],
-      "@backbase-react/shared": ["shared/src/index.ts"],
-      "@backbase-react/tyscript-rxjs": ["tyscript-rxjs/src/index.ts"],
-      "@backbase-react/ui-react": ["ui-react/src/index.ts"]
+      "@backbase/auth": ["auth/src/index.ts"],
+      "@backbase/bb-accounts": ["bb-accounts/src/index.ts"],
+      "@backbase/shared": ["shared/src/index.ts"],
+      "@backbase/tyscript-rxjs": ["tyscript-rxjs/src/index.ts"],
+      "@backbase/ui-react": ["ui-react/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

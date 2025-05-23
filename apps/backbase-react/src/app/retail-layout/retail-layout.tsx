@@ -1,4 +1,4 @@
-import { Footer, Header } from '@backbase-react/shared';
+import { Footer, Header } from '@backbase/shared';
 import { PropsWithChildren } from 'react';
 import { Container } from 'react-bootstrap';
 import styles from './retail-layout.module.scss';

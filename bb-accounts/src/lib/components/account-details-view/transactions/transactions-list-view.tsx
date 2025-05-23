@@ -1,6 +1,6 @@
-import { CardWrapper, ErrorView, ViewWithLoader } from '@backbase-react/ui-react';
+import { CardWrapper, ErrorView, ViewWithLoader } from '@backbase/ui-react';
 import { useEffect, useState } from 'react';
-import { accountsTransactionHttpClientServiceObj } from '@backbase-react/auth';
+import { accountsTransactionHttpClientServiceObj } from '@backbase/auth';
 import EachTransactionListItemView from './each-transaction-list-item-view/each-transaction-list-item-view';
 import { useParams } from "react-router-dom";
 

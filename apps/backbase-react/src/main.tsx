@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import App from './app/app';
 import { AuthProvider } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router-dom';
-import { oidcConfig } from '@backbase-react/auth';
+import { oidcConfig } from '@backbase/auth';
 import { environment } from './environments/environment';
 
 const root = ReactDOM.createRoot(
